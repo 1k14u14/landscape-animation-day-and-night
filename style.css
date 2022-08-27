@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: full;
+  height: 100vh;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: lightskyblue;
+  transition: 500ms 500ms;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  background: #ffa500;
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  border-radius: 50px;
+  box-shadow: 0 0 3px 5px rgba(255, 255, 0, 0.8);
+}
+
+.ball::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: lightskyblue;
+  position: fixed;
+  top: 30px;
+  left: -35px;
+  border-radius: 50px;
+  transition: left 500ms, background 500ms 500ms;
+}
+
+input[type="checkbox"] {
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .container {
+  background: #000;
+}
+
+input[type="checkbox"]:checked ~ .ball {
+  background: #fff;
+  box-shadow: 0 0 0 0;
+}
+
+input[type="checkbox"]:checked ~ .ball::before {
+  left: 0px;
+  background: #000;
+}
+
+.cloud {
+  height: 25px;
+  width: 85px;
+  background: white;
+  position: fixed;
+  top: 70px;
+  left: 50px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: white;
+  position: fixed;
+  top: 40px;
+  left: 57px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: white;
+  position: fixed;
+  top: 55px;
+  left: 93px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud2 {
+  height: 25px;
+  width: 85px;
+  background: white;
+  position: fixed;
+  top: 70px;
+  left: 200px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud2::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: white;
+  position: fixed;
+  top: 40px;
+  left: 207px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud2::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: white;
+  position: fixed;
+  top: 55px;
+  left: 243px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud3 {
+  height: 25px;
+  width: 85px;
+  background: white;
+  position: fixed;
+  top: 70px;
+  left: 350px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud3::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: white;
+  position: fixed;
+  top: 40px;
+  left: 357px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+.cloud3::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: white;
+  position: fixed;
+  top: 55px;
+  left: 393px;
+  border-radius: 30px;
+  transition: 1s 500ms;
+}
+
+input[type="checkbox"]:checked ~ .cloud {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud::before {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud::after {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud2 {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud2::before {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud2::after {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud3 {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud3::before {
+  background: lightgrey;
+}
+
+input[type="checkbox"]:checked ~ .cloud3::after {
+  background: lightgrey;
+}
+
+.mountain {
+  width: 1000px;
+  height: 1000px;
+  background: green;
+  position: fixed;
+  top: 300px;
+  left: -150px;
+  transform: rotate(45deg);
+  transition: background 1s 500ms;
+}
+
+.mountain::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  background: green;
+  position: fixed;
+  top: 190px;
+  left: -100px;
+  transition: background 1s 500ms;
+}
+
+input[type="checkbox"]:checked ~ .mountain {
+  background: darkgreen;
+}
+
+input[type="checkbox"]:checked ~ .mountain::before {
+  background: darkgreen;
+}
